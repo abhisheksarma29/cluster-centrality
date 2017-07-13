@@ -11,7 +11,7 @@ import pandas as pd
 
 def connect():
     try:
-        conn = mysql.connector.connect(host='10.0.10.14',database='identitypp_db',user='root',password='sunr1se')
+        conn = mysql.connector.connect(host='10.0.10.14',database='identitypp_db',user='root',password='')
         if conn.is_connected():
             print('Connected to MySQL database')
     except Error as e:
@@ -23,7 +23,7 @@ def connect():
 def query_with_fetchall():
     try:
         #dbconfig = read_db_config()
-        dbconfig={'host':'10.0.10.14','database':'identitypp_db','user':'root','password':'sunr1se'}
+        dbconfig={'host':'10.0.10.14','database':'identitypp_db','user':'root','password':''}
         conn = MySQLConnection(**dbconfig)
         if conn.is_connected():
             print('Connected to MySQL database')
@@ -175,7 +175,7 @@ def cal_coeffs(list_tuple):  #taking argument of tuples
 
 #update databases
 def update(network_to_dict):
-    dbconfig={'host':'10.0.10.14','database':'identitypp_db','user':'root','password':'sunr1se'}
+    dbconfig={'host':'10.0.10.14','database':'identitypp_db','user':'root','password':''}
     conn = MySQLConnection(**dbconfig)
     if conn.is_connected():
             print('Connected to MySQL database')
