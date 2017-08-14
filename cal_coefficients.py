@@ -11,7 +11,7 @@ import pandas as pd
 
 def connect():
     try:
-        conn = mysql.connector.connect(host='10.0.10.14',database='identitypp_db',user='root',password='')
+        conn = mysql.connector.connect(host='10.0.10.14',database='identitypp_db',user='',password='')
         if conn.is_connected():
             print('Connected to MySQL database')
     except Error as e:
